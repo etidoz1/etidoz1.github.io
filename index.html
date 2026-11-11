@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Udoh - Frontend Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --bg-main: #09090B;
+            --bg-card: #18181B;
+            --border-color: #27272A;
+            --text-main: #FAFAFA;
+            --text-muted: #A1A1AA;
+            --accent: #10B981;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+        
+        /* Hero */
+        .hero { text-align: center; margin-bottom: 80px; }
+        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -1px; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background-color: var(--accent); color: #000; 
+            padding: 12px 24px; border-radius: 8px; font-weight: 600;
+            text-decoration: none; transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.9; }
+
+        /* Projects */
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
+        .projects-grid { display: grid; gap: 24px; margin-bottom: 80px; }
+        
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .project-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+        .project-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .tag {
+            background-color: rgba(16, 185, 129, 0.1); color: var(--accent);
+            padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500;
+        }
+        .project-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.9rem;
+        }
+        .project-link:hover { color: var(--accent); }
+
+        /* Footer */
+        footer { text-align: center; padding-top: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
+        .socials { display: flex; justify-content: center; gap: 16px; margin-bottom: 16px; }
+        .socials a { color: var(--text-muted); transition: color 0.2s; }
+        .socials a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Hi, I'm Emmanuel <span>Udoh.</span></h1>
+            <p>I am a Frontend Developer specializing in rapid MVP development. I build full-stack, database-driven web applications using modern JavaScript, Firebase, and AI-assisted workflows.</p>
+            <a href="#projects" class="btn">View My Work <i data-lucide="arrow-down"></i></a>
+        </section>
+
+        <!-- Projects Section -->
+        <h2 class="section-title">Featured Projects</h2>
+        <section class="projects-grid" id="projects">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>AgentCopilot (SaaS Dashboard)</h3>
+                <p>A premium real-estate AI workspace featuring a custom dark-mode UI, real Firebase authentication, database integration, and a fully responsive Kanban CRM board.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Firebase</span>
+                </div>
+                <a href="https://etidoz1.github.io/Agentcopilot-html/" target="_blank" class="project-link">
+                    View Live App <i data-lucide="external-link"></i>
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>RentLoop (Marketplace)</h3>
+                <p>A full-stack peer-to-peer equipment rental marketplace. Features role-based dashboards (Renter, Owner, Admin), a complete booking engine, and dynamic listing management.</p>
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">Prisma</span>
+                    <span class="tag">PostgreSQL</span>
+                </div>
+                <a href="#" class="project-link">
+                    View Code on GitHub <i data-lucide="github"></i>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="socials">
+                <a href="https://github.com/etidoz1" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+                <a href="#" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#" title="Email"><i data-lucide="mail"></i></a>
+            </div>
+            <p>© 2026 Emmanuel Udoh. Built from scratch.</p>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
